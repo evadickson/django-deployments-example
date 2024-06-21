@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+{% extends "ACE_app/base.html" %}
+{% load my_extras %}
+{% block body_block %}
+{% load static %}
+<div class = 'jumbotron'>
+    <h1>Welcome to Level Five</h1>
+    <img src={% static "ACE_app/images/kelp.jpg" %} alt="Uh oh, didn't show!">
+    <h1>{{ text|cut:'world' }}</h1>
+    <h1>{{ number|add:"99" }}</h1>
+    <h2> Go to /users to sign up</h2>
+    <h2> Go to /formpage to fill out the form</h2>
+
+</div>    
+        
+        
+    {% endblock %}

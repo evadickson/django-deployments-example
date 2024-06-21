@@ -1,0 +1,23 @@
+{% extends 'ACE_app/base.html' %}
+{% block body_block %}
+
+<div class = 'container-fluid text-sm-center p-5 bg-light'>
+    <h1 class='display-2 pt-5'> Please Login</h1>
+    <p class='lead'>
+        <form action="{% url 'ACE_app:user_login' %}">
+            {% csrf_token %}
+            <label for="username">Username:</label>
+            <input type="text" name="username" placeholder="Enter Username">
+
+            <label for="password">Password:</label>
+            <input type="password" name="password">
+
+            <input type="submit" name="" value="Login">
+        </form>  
+    </p>    
+
+
+
+</div>
+
+{% endblock %}
